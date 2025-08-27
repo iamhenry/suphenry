@@ -19,7 +19,7 @@ export type Hero = {
 export type Subscribe = {
     title?: string;
     text?: string;
-    formUrl: string;
+    formUrl?: string;
 };
 
 export type SiteConfig = {
@@ -114,7 +114,7 @@ const siteConfig: SiteConfig = {
     subscribe: {
         title: 'Subscribe to Dante Newsletter',
         text: 'One update per week. All the latest posts directly in your inbox.',
-        formUrl: '#'
+        // formUrl: '#'  // Commented out to disable newsletter
     },
     postsPerPage: 8,
     projectsPerPage: 8

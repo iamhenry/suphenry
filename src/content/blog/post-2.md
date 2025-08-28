@@ -13,3 +13,4 @@ seo:
 ### [Building AI Products In The Probabilistic Era](https://giansegato.com/essays/probabilistic-era)
 1. Moving from determistic to probalistic software creation
 2. Good design is not always quantifiable. Tasteful products aren’t about metrics. But ultimately they do exist to deliver value, and value is always delivered in funnels.
+3. The goal isn’t perfection: by definition you can’t nor should aim for it. **The goal is to manage the uncertainty**. As an AI product builder, you should determine what’s the acceptable unpredictability that keeps the model capable of dealing with complexity, given the market you’re operating in and the audience you’re serving.

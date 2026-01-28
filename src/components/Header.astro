@@ -9,15 +9,21 @@ import siteConfig from '../data/site-config';
                 <img src={siteConfig.logo.src} alt={siteConfig.logo.alt || ''} class="max-h-12" />
             </a>
         ) : (
-            <a class="flex items-center gap-4 font-serif text-2xl leading-tight font-medium text-theme-foreground sm:text-4xl" href="/">
-                <img 
-                    src="/cartoon-avatar.png" 
-                    alt="Henry" 
-                    class="w-12 h-12 rounded-full object-cover sm:w-14 sm:h-14"
-                />
-                {siteConfig.title}
-            </a>
+            <div class="flex items-center gap-6">
+                <a href="/">
+                    <img 
+                        src="/cartoon-avatar.png" 
+                        alt="Henry" 
+                        class="w-16 h-16 rounded-full object-cover sm:w-20 sm:h-20"
+                    />
+                </a>
+                <div class="flex flex-col">
+                    <a class="font-serif text-2xl leading-tight font-medium text-theme-foreground sm:text-4xl" href="/">
+                        {siteConfig.title}
+                    </a>
+                    {siteConfig.subtitle && <p class="text-sm leading-tight mt-1">{siteConfig.subtitle}</p>}
+                </div>
+            </div>
         )
     }
-    {siteConfig.subtitle && <p class="text-sm leading-tight mt-1">{siteConfig.subtitle}</p>}
 </header>

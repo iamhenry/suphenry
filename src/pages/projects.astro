@@ -1,0 +1,57 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+
+const projects = [
+    { name: "Humanizer", year: "Jan 2026", desc: "AI text humanizer Claude Code skill", status: "Active", url: "https://github.com/iamhenry/humanizer" },
+    { name: "OpenCode Antigravity Quota", year: "Jan 2026", desc: "OpenCode tmux session manager", status: "Active", url: "https://github.com/iamhenry/opencode-antigravity-quota-tmux" },
+    { name: "Openbox Deal Finder", year: "Jan 2026", desc: "Daily open-box deal finder web app", status: "Active", url: "https://github.com/iamhenry/openbox-deal-finder" },
+    { name: "VS Code Vercel Theme", year: "Dec 2025", desc: "Vercel-inspired VS Code theme", status: "Active", url: "https://github.com/iamhenry/vscode-vercel-theme" },
+    { name: "Playport", year: "Oct 2025", desc: "Move music from Apple Music to Spotify seamlessly", status: "Active", url: "https://useplayport.com" },
+    { name: "CatCode", year: "Aug 2025", desc: "Code editor tool", status: "Active", url: "https://github.com/iamhenry/catcode" },
+    { name: "Yes Chef", year: "Jul 2025", desc: "AI-powered recipe discovery app", status: "Active", url: "https://www.getyeschef.app/" },
+    { name: "Plan Hook", year: "Jul 2025", desc: "Planning automation tool", status: "Active", url: "https://github.com/iamhenry/plan-hook" },
+    { name: "GenSpec MCP", year: "Jun 2025", desc: "GenSpec MCP server for AI agents", status: "Active", url: "https://github.com/iamhenry/GenSpec-MCP" },
+    { name: "RevenueCat MCP", year: "Jun 2025", desc: "RevenueCat API MCP server", status: "Active", url: "https://github.com/iamhenry/revenuecat-mcp" },
+    { name: "Roo Rules and Tools", year: "Apr 2025", desc: "Roo Code rules collection", status: "Active", url: "https://github.com/iamhenry/Roo-Rules-and-Tools" },
+    { name: "AI Project Starter Kit", year: "Apr 2025", desc: "AI project boilerplate starter", status: "Active", url: "https://github.com/iamhenry/ai-project-starter-kit" },
+    { name: "Zero Proof", year: "Mar 2025", desc: "Alcohol-free drink tracker iOS app", status: "Active", url: "https://zeroproof.app/" },
+    { name: "Momentry", year: "Mar 2025", desc: "Mac menu bar journaling app", status: "Active", url: "https://momentry.app/" },
+];
+---
+
+<BaseLayout
+    title="Projects"
+    description="A collection of projects I've worked on"
+    image={{ src: '/dante-preview.jpg', alt: 'The preview of the site' }}
+    showHeader={false}
+>
+    <h1 class="mb-10 text-2xl leading-tight font-serif italic sm:mb-12 sm:text-4xl">Projects</h1>
+    
+    <div class="flex flex-col text-sm">
+        <!-- Header Row -->
+        <div class="flex border-b border-main opacity-70">
+            <div class="flex-[2] py-4 pr-4 font-medium">Project</div>
+            <div class="flex-1 py-4 pr-4 font-medium">Started</div>
+            <div class="flex-[3] py-4 pr-4 font-medium">Description</div>
+            <div class="flex-1 py-4 font-medium">Status</div>
+        </div>
+        <!-- Data Rows -->
+        {projects.map((project) => (
+            <div class="flex border-b border-main/30">
+                <div class="flex-[2] py-5 pr-4">
+                    <a 
+                        href={project.url} 
+                        target="_blank" 
+                        rel="noopener noreferrer"
+                        class="underline underline-offset-2 hover:opacity-70 transition-opacity"
+                    >
+                        {project.name}
+                    </a>
+                </div>
+                <div class="flex-1 py-5 pr-4 opacity-70">{project.year}</div>
+                <div class="flex-[3] py-5 pr-4">{project.desc}</div>
+                <div class="flex-1 py-5 opacity-70">{project.status}</div>
+            </div>
+        ))}
+    </div>
+</BaseLayout>
